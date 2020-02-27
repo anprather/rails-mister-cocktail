@@ -12,6 +12,18 @@
   </head>
 
   <body>
+        <nav class="navbar navbar-light bg-light shadow">
+      <div class="navbar-link">
+        <h1>🍹 Take it easy, have a cocktail 🍹</h1>
+      </div>
+
+      <div class="navbar-link add-cocktail">
+        <%= link_to new_cocktail_path do%>
+          <i class="fas fa-plus"></i> Add a cocktail
+        <% end %>
+      </div>
+    </nav>
+
     <%= yield %>
 
     <%= javascript_include_tag "application" %>

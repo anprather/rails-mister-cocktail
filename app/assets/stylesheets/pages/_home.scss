@@ -1,1 +1,46 @@
 // Specific CSS for your home-page
+h1 {
+  font-family: 'Avenir Next', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 28px;
+}
+
+.cocktails-list {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.cocktail {
+  display: flex;
+  width: 700px;
+  overflow: hidden;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.cocktail-info {
+  padding: 16px;
+  display: flex;
+  align-text: center;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.cocktail-detail {
+  margin: 10px;
+  width: 400px;
+}
+
+.cocktail-desc {
+  padding-top: 10px;
+}

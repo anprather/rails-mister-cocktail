@@ -1,2 +1,16 @@
-<h1>Cocktails#index</h1>
-<p>Find me in app/views/cocktails/index.html.erb</p>
+<div class="cocktails-list">
+
+  <% @cocktails.each do |cocktail| %>
+    <div class="cocktail">
+      <div class="image-cocktail">
+      <img src="https://source.unsplash.com/150x150/?cocktail,drink" alt="" height="100px">
+      </div>
+      <div class="cocktail-info">
+        <p><%= link_to cocktail.name, cocktail_path(cocktail.id) %> • delete? </p>
+        <p><%= link_to cocktail_path(cocktail.id), method: :delete, data: {confirm: "Are you sure?"} do %>
+          <i class="far fa-trash-alt pl-2" style="font-size: 14px"></i>
+          <% end %></p>
+      </div>
+    </div>
+  <% end %>
+</div>

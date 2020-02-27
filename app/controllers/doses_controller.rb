@@ -1,5 +1,5 @@
 class DosesController < ApplicationController
-  def index
+  def show
   end
 
   def new
@@ -12,5 +12,8 @@ class DosesController < ApplicationController
   end
 
   def edit
+  end
+
+  def destroy
   end
 end
