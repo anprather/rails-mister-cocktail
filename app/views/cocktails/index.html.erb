@@ -3,7 +3,11 @@
   <% @cocktails.each do |cocktail| %>
     <div class="cocktail">
       <div class="image-cocktail">
-      <img src="https://source.unsplash.com/150x150/?cocktail,drink" alt="" height="100px">
+      <% if cocktail.photo.attached? %>
+        <%= cl_image_tag cocktail.photo.key, height: 200, width: 200, crop: :fill %>
+      <% else %>
+        <img src="https://source.unsplash.com/200x<%= rand(200..400) %>/?cocktail,drink" alt="">
+      <% end %>
       </div>
       <div class="cocktail-info">
         <p><%= link_to cocktail.name, cocktail_path(cocktail.id) %> • delete? </p>

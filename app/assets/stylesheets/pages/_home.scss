@@ -9,6 +9,13 @@ h2 {
   font-family: 'Open Sans', sans-serif;
   font-size: 28px;
 }
+body {
+  height: 100vh;
+  background: linear-gradient(356deg, rgba(2,0,36,1) 0%, rgba(74,50,50,1) 32%, rgba(52,52,60,1) 68%, rgba(13,34,38,1) 100%);
+  background-size: auto;
+  background-repeat: no-repeat;
+  color: white;
+}
 
 .cocktails-list {
   display: flex;
@@ -43,4 +50,36 @@ h2 {
 
 .cocktail-desc {
   padding-top: 10px;
+}
+
+.container-add {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  margin-top: 100px;
+  padding: 40px;
+  overflow: hidden;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.container-add {
+  color: black;
+}
+
+.upload-photo {
+  border: 1px solid #d3d3d3;
+  padding: 16px 24px;
+  cursor: pointer;
+  font-weight: 500;
+  background: white;
+  border-radius: 2px;
+}
+
+.navbar {
+  color: white;
+  background-color: black;
 }
