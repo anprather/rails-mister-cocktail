@@ -1,9 +1,28 @@
-<div class="cocktail-detail">
-  <h2><%= @cocktail.name %></h2>
-  <img src="https://source.unsplash.com/150x150/?cocktail,drink" alt="" height="200px" style="border-radius: 2px;">
-  <div class="cocktail-desc">
-  <p>Here is a description of your cocktail. Here is a description of your cocktail. Here is a description of your cocktail. Here is a description of your cocktail. Here is a description of your cocktail. Here is a description of your cocktail. </p>
-  <br>
-    <%= link_to "Back to cocktails", cocktails_path %>
+<div class="container">
+  <div class="row">
+    <div class="cocktail-detail col-sm">
+      <h2><%= @cocktail.name %></h2>
+      <img src="https://source.unsplash.com/150x150/?cocktail,drink" alt="" height="200px" style="border-radius: 2px;">
+      <div class="cocktail-desc">
+        <p>Here is a description of your cocktail. Here is a description of your cocktail. Here is a description of your cocktail. Here is a description of your cocktail. Here is a description of your cocktail. Here is a description of your cocktail. </p>
+        <br>
+          <%= link_to "Back to cocktails", cocktails_path %>
+      </div>
+    </div>
+
+    <div class="add-ingredient col-sm pt-4">
+      <p>list of doses</p>
+      <ul>
+        <% @cocktail.doses.each do |dose|  %>
+          <li><%= dose.description %> <%= dose.ingredient.name %>
+            <%= link_to dose_path(dose.id), method: :delete, data: {confirm: "Are you sure?"} do %>
+            <i class="far fa-trash-alt pl-2" style="font-size: 14px"></i>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+      <br>
+      <%= render 'doses/form', dose: @dose, cocktail: @cocktail %>
+    </div>
   </div>
 </div>
